@@ -2,77 +2,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <!--meta name="viewport" content="initial-scale=1.0" /-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 <!-- So that mobile webkit will display zoomed in -->
 <meta name="format-detection" content="telephone=no">
 <title>{Titolo}</title>
 <style type="text/css">
 
 
-/* Hotmail background & line height fixes */
-.ExternalClass { width: 100% !important; }
-.ExternalClass * { line-height: 100% }
-.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
-
-
-/* General */
-body { margin: 0; padding: 0; min-width: 260px; font-family: Arial, Helvetica, sans-serif; }
-table, td { border-spacing: 0 !important; overflow: hidden !important; }
-img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
-p { }
-
-
-/* Typography */
-h1, h2, h3 { margin: 0; line-height: 1; font-family: Arial, Helvetica, sans-serif; }
-h1 { font-size: 30px; }
-h2 { font-size: 18px; text-transform: uppercase; }
-h3 { font-size: 14px; text-transform: uppercase; }
-p { font-family: Arial, Helvetica, sans-serif; font-size: 14px; margin: 0; }
-
-
-/* Grid System */
-table[class="root"] { width: 100%; }
-table[class="root"] > tbody > tr > td { width: 100%; }
-table[class="container"] { width: 600px; /* Imposta larghezza newsletter */ }
-
-
-/* Colonne */
-td[class="gutter"] { width: 2%; }
-td[class="col-1of1"] { width: 96%; }
-td[class="col-1of2"] { width: 46%; }
-td[class="col-1of3"] { width: 29.333333%; }
-td[class="col-2of3"] { width: 58.666666%; }
-td[class="col-1of4"] { width: 21%; }
-td[class="col-2of4"] { width: 46%; }
-td[class="col-3of4"] { width: 71%; }
-td[class="col-1of5"] { width: 16%; }
-td[class="col-2of5"] { width: 36%; }
-td[class="col-3of5"] { width: 56%; }
-td[class="col-4of5"] { width: 76%; }
-
-
-/* No padding */
-td[class="no-padd"] { padding-left: 0 !important; padding-right: 0 !important; }
-td[class="col-1of1 no-padd"] { width: 100%; }
-td[class="col-1of2 no-padd"] { width: 50%; }
-td[class="col-1of3 no-padd"] { width: 33.333333%; }
-td[class="col-2of3 no-padd"] { width: 66.666666%; }
-td[class="col-1of4 no-padd"] { width: 25%; }
-td[class="col-2of4 no-padd"] { width: 50%; }
-td[class="col-3of4 no-padd"] { width: 75%; }
-td[class="col-1of5 no-padd"] { width: 20%; }
-td[class="col-2of5 no-padd"] { width: 40%; }
-td[class="col-3of5 no-padd"] { width: 60%; }
-td[class="col-4of5 no-padd"] { width: 80%; }
-
-
-/* Immagini liquide */
-td[class^=col] img { width: 100%; }
-td[class^=col] img[class*="scale-off"], img[class*="scale-off"] { width: auto; }
-
-
-@media screen and (max-width:600px) {
+	/* Hotmail background & line height fixes */
+	.ExternalClass { width: 100% !important; }
+	.ExternalClass * { line-height: 100% }
+	.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+	
+	
+	/* General */
+	body { 
+		margin: 0; 
+		padding: 0; 
+		min-width: 260px; 
+		font-family: Arial, Helvetica, sans-serif; 
+	}
+	table, td { 
+		border-spacing: 0 !important; 
+		overflow: hidden !important; 
+	}
+	
+	
+	img { 
+		display: block; 
+		outline: none; 
+		text-decoration: none; 
+		-ms-interpolation-mode: bicubic; 
+	}
+	
+	
+	
+	/* Typography */
+	h1, h2, h3 { margin: 0; line-height: 1; font-family: Arial, Helvetica, sans-serif; }
+	h1 { font-size: 30px; }
+	h2 { font-size: 18px; text-transform: uppercase; }
+	h3 { font-size: 14px; text-transform: uppercase; }
+	p { font-family: Arial, Helvetica, sans-serif; font-size: 14px; margin: 0; }
+	
+	
+	/* Grid System */
+	table[class="root"] { width: 100%; }
+	table[class="root"] > tbody > tr > td { width: 100%; }
+	table[class="container"] { width: 600px; /* Imposta larghezza newsletter */ }
+	
+	
+	/* Colonne */
+	td[class="gutter"] { width: 2%; }
+	td[class="col-1of1"] { width: 96%; }
+	td[class="col-1of2"] { width: 46%; }
+	td[class="col-1of3"] { width: 29.333333%; }
+	td[class="col-2of3"] { width: 58.666666%; }
+	td[class="col-1of4"] { width: 21%; }
+	td[class="col-2of4"] { width: 46%; }
+	td[class="col-3of4"] { width: 71%; }
+	td[class="col-1of5"] { width: 16%; }
+	td[class="col-2of5"] { width: 36%; }
+	td[class="col-3of5"] { width: 56%; }
+	td[class="col-4of5"] { width: 76%; }
+	
+	
+	/* No padding */
+	td[class="no-padd"] { padding-left: 0 !important; padding-right: 0 !important; }
+	td[class="col-1of1 no-padd"] { width: 100%; }
+	td[class="col-1of2 no-padd"] { width: 50%; }
+	td[class="col-1of3 no-padd"] { width: 33.333333%; }
+	td[class="col-2of3 no-padd"] { width: 66.666666%; }
+	td[class="col-1of4 no-padd"] { width: 25%; }
+	td[class="col-2of4 no-padd"] { width: 50%; }
+	td[class="col-3of4 no-padd"] { width: 75%; }
+	td[class="col-1of5 no-padd"] { width: 20%; }
+	td[class="col-2of5 no-padd"] { width: 40%; }
+	td[class="col-3of5 no-padd"] { width: 60%; }
+	td[class="col-4of5 no-padd"] { width: 80%; }
+	
+	
+	/* Immagini liquide */
+	td[class^=col] img { width: 100%; }
+	td[class^=col] img[class*="scale-off"], img[class*="scale-off"] { width: auto; }
+	
+	
+	@media screen and (max-width:600px) {
 
 
 	/* Grid System */                
@@ -81,6 +98,8 @@ td[class^=col] img[class*="scale-off"], img[class*="scale-off"] { width: auto; }
 	table[class*="col"] img { /* Immagini liquide */ width: 100% !important; }
 	td[class="gutter"] { width: 2% !important; }
 	
+	
+	/* Visibility */
 	[class*="desktop-only"] {
 	 display: none !important;
 	 width:0 !important;
