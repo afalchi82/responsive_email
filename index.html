@@ -6,38 +6,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- So that mobile webkit will display zoomed in -->
 <meta name="format-detection" content="telephone=no">
-<title>A San Valentino regala Wellness Ball™</title>
+<title>{Titolo}</title>
 <style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
-/* La regola @import va inserita prima di ogni altro comando (commenti compresi) */			
 
 
 /* Hotmail background & line height fixes */
 .ExternalClass { width: 100% !important; }
+.ExternalClass * { line-height: 100% }
 .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
-/* General 
------------------------------------------------------------------------ */
+
+
+/* General */
 body { margin: 0; padding: 0; min-width: 260px; font-family: Arial, Helvetica, sans-serif; }
 table, td { border-spacing: 0 !important; overflow: hidden !important; }
 img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
 p { }
-/* Typography
-            ----------------------------------------------------------------------- */
-h1, h2, h3 { /* Required */ margin: 0; line-height: 1; /* /Required */ font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif; }
+
+
+/* Typography */
+h1, h2, h3 { margin: 0; line-height: 1; font-family: Arial, Helvetica, sans-serif; }
 h1 { font-size: 30px; }
 h2 { font-size: 18px; text-transform: uppercase; }
 h3 { font-size: 14px; text-transform: uppercase; }
 p { font-family: Arial, Helvetica, sans-serif; font-size: 14px; margin: 0; }
-/* Fix */
-.ExternalClass * { line-height: 100% }
-/* Grid System
-            ----------------------------------------------------------------------- */
-            
-			/* Tabella contenitore a livello body */
+
+
+/* Grid System */
 table[class="root"] { width: 100%; }
 table[class="root"] > tbody > tr > td { width: 100%; }
-/* Container */
 table[class="container"] { width: 600px; /* Imposta larghezza newsletter */ }
+
+
 /* Colonne */
 td[class="gutter"] { width: 2%; }
 td[class="col-1of1"] { width: 96%; }
@@ -51,6 +50,8 @@ td[class="col-1of5"] { width: 16%; }
 td[class="col-2of5"] { width: 36%; }
 td[class="col-3of5"] { width: 56%; }
 td[class="col-4of5"] { width: 76%; }
+
+
 /* No padding */
 td[class="no-padd"] { padding-left: 0 !important; padding-right: 0 !important; }
 td[class="col-1of1 no-padd"] { width: 100%; }
@@ -64,98 +65,115 @@ td[class="col-1of5 no-padd"] { width: 20%; }
 td[class="col-2of5 no-padd"] { width: 40%; }
 td[class="col-3of5 no-padd"] { width: 60%; }
 td[class="col-4of5 no-padd"] { width: 80%; }
+
+
 /* Immagini liquide */
 td[class^=col] img { width: 100%; }
 td[class^=col] img[class*="scale-off"], img[class*="scale-off"] { width: auto; }
 
 
- @media screen and (max-width:600px) {
-/* Grid System */
-                
-                
-table[class*="root"] { margin: 0 auto !important; }
-table[class*="container"] { /* 
-                    * Righe liquide fino ai 600px
-                    * al 98% per spaziatura dal bordo
-                    */ width: 98% !important; /* Fix Gmail autosize */ min-width: 260px !important; }
-table[class*="col"] img { /* Immagini liquide */ width: 100% !important; }
-td[class="gutter"] { width: 2% !important; }
- [class*="desktop-only"] {
- display: none !important;
- width:0 !important;
- height:0 !important;
- overflow:hidden !important;
-}
- [class*="mobile-only"] {
- display: block !important;
- max-height: none !important;
-}
-/* Responsive Log */
-tr[class="resp_log"] td[class="log"] { background: #FF5F63; }
+@media screen and (max-width:600px) {
 
-/* Visibility */
-[class="xs-only"] {
- display: none !important;
- width:0 !important;
- height:0 !important;
- overflow:hidden !important;
+
+	/* Grid System */                
+	table[class*="root"] { margin: 0 auto !important; }
+	table[class*="container"] { width: 98% !important; /* Fix Gmail autosize */ min-width: 260px !important; }
+	table[class*="col"] img { /* Immagini liquide */ width: 100% !important; }
+	td[class="gutter"] { width: 2% !important; }
+	
+	[class*="desktop-only"] {
+	 display: none !important;
+	 width:0 !important;
+	 height:0 !important;
+	 overflow:hidden !important;
+	}
+	 [class*="mobile-only"] {
+	 display: block !important;
+	 max-height: none !important;
+	}
+	
+	
+	/* Responsive Log */
+	tr[class="resp_log"] td[class="log"] { background: #FF5F63; }
+	
+	/* Visibility */
+	[class="xs-only"] {
+	 display: none !important;
+	 width:0 !important;
+	 height:0 !important;
+	 overflow:hidden !important;
+	}
+	 [class="xs-hidden"] {
+	 display: none !important;
+	 width:0 !important;
+	 height:0 !important;
+	 overflow:hidden !important;
+	}
+	
 }
- [class="xs-hidden"] {
- display: none !important;
- width:0 !important;
- height:0 !important;
- overflow:hidden !important;
-}
-}
+
+
  @media screen and (max-width:480px) {
-td[class^="col"] { display: block ! important; width: 100% !important; float: left; }
-td[class="col-1of2"] { /* Incolonna le celle  */ display: block ! important; /* Espande cella al 100% */ width: 100% !important; }
-td[class="gutter"] { /* Elimina i gutter */ display: none !important; }
-/* Colonne non responsive */
-td[class^="col"] td[class^="col"] { display: table-cell !important; width: auto !important; }
-td[class^="col"] td[class="gutter"] { display: table-cell !important; width: 2% !important; }
-td[class*="padding"] { width: 92% !important; padding-right: 4% !important; padding-left: 4% !important; }
-/* Visibility */	
-table[class*="xs-only"] { display: table !important; width: auto !important; height: auto !important; }
- [class*="xs-hidden"] {
- display: none !important;
- width:0 !important;
- height:0 !important;
- overflow:hidden !important;
-}
-*[class*="mobile-only"] { display: block !important; max-height: none !important; }
-		
-	/* Padding */
-	[class*="mobile-padding-top"] {
-padding-top:20px !important;
-}
+	 
+	td[class^="col"] { 
+		display: block ! important; 
+		width: 100% !important; 
+		float: left; 
+	}
+	td[class="col-1of2"] { 
+		display: block ! important; /* Incolonna le celle  */ 
+		width: 100% !important; /* Espande cella al 100% */  
+	}
+	td[class="gutter"] { 
+		display: none !important; /* Elimina i gutter */ 
+	}
+	
+	/* Colonne non responsive */
+	td[class^="col"] td[class^="col"] { display: table-cell !important; width: auto !important; }
+	td[class^="col"] td[class="gutter"] { display: table-cell !important; width: 2% !important; }
+	td[class*="padding"] { width: 92% !important; padding-right: 4% !important; padding-left: 4% !important; }
+	
+	/* Visibility */	
+	table[class*="xs-only"] { display: table !important; width: auto !important; height: auto !important; }
+	 [class*="xs-hidden"] {
+	 display: none !important;
+	 width:0 !important;
+	 height:0 !important;
+	 overflow:hidden !important;
+	}
+	*[class*="mobile-only"] { display: block !important; max-height: none !important; }
+			
+		/* Padding */
+		[class*="mobile-padding-top"] {
+	padding-top:20px !important;
+	}
 											
 	/* Tipography */
 	
 	[class*="title"] {
- font-size:15px !important;
-}
- [class*="copy"] {
- font-size:15px !important;
-}
- [class*="disclaimer"] {
- font-size:11px !important;
-}
-[class*="mobile-right"] {
-text-align:right !important;
-}
-[class*="mobile-left"] {
-text-align:left !important;
-}
+	 font-size:15px !important;
+	}
+	 [class*="copy"] {
+	 font-size:15px !important;
+	}
+	 [class*="disclaimer"] {
+	 font-size:11px !important;
+	}
+	[class*="mobile-right"] {
+	text-align:right !important;
+	}
+	[class*="mobile-left"] {
+	text-align:left !important;
+	}
 
-[class*="mar-b"] {
-              		margin-bottom:20px !important;
-              	}
+	[class*="mar-b"] {
+		margin-bottom:20px !important;
+	}
 
 
-/* Responsive Log */
-tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
-}
+	/* Responsive Log */
+	tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
+	}
 </style>
 </head>
 
@@ -176,7 +194,7 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
                     </tr>
                     <tr>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
-                      <td class="" align="left" valign="middle" style="border-spacing:0 !important;" width="276"><a href="http://www.technogym.com/it/viewdoc.asp?co_id=22033&la=1" style="font-family:Arial, Tahoma, Helvetica, sans-serif; text-transform:uppercase; font-size:12px; color:#ffffff; text-decoration:none;">view online <img class="scale-off" src="http://www.technogym.com/webmarketing/_doc/responsive_email/img/link-freccia-bianca.png" alt="" width="11" height="11" style="display:inline; outline:none; text-decoration:none; border:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important;"></a></td>
+                      <td class="" align="left" valign="middle" style="border-spacing:0 !important;" width="276"><a href="#" style="font-family:Arial, Tahoma, Helvetica, sans-serif; text-transform:uppercase; font-size:12px; color:#ffffff; text-decoration:none;">view online <img class="scale-off" src="http://www.technogym.com/webmarketing/_doc/responsive_email/img/link-freccia-bianca.png" alt="" width="11" height="11" style="display:inline; outline:none; text-decoration:none; border:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important;"></a></td>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
                       <td class="" align="right" valign="middle" style="border-spacing:0 !important;" width="276"><table id="social" border="0" cellspacing="0" cellpadding="0">
@@ -199,12 +217,11 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
                 </table></td>
             </tr>
           </tbody>
-        </table>
-        
+        </table>        
         <!-- /Top header -->
         
-        <!-- Logo section -->
         
+        <!-- Logo section -->        
         <table border="0" width="100%" cellpadding="0" cellspacing="0" class="root" style="border-spacing: 0px !important;">
           <tbody>
             <tr>
@@ -284,7 +301,7 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
                       <td class="col-1of1" align="center" valign="middle" style="border-spacing:0 !important;" width="576"><table border="0" cellspacing="0" cellpadding="0" class="btn">
                           <tbody>
                             <tr>
-                              <td bgcolor="#f1ea8b" style="padding:12px 18px 12px 18px;border-radius:3px; border: 1px solid #DAD483;" align="center"><a href="http://www.technogym.com/it/wellness-ball-active-sitting/18866?la=1&cam=215887&utm_source=dem&utm_medium=email&utm_content=it&utm_campaign=DEM_SANVALENTINO_ITA_2014" style="font-size:14px;font-family:Arial,sans-serif;font-weight:normal;color:#41535d;text-decoration:none" target="_blank">Acquista ora! <img class="scale-off" src="http://www.technogym.com/webmarketing/_doc/responsive_email/img/link-freccia-verde.png" alt="" width="11" height="11" style="display:inline; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;"></a></td>
+                              <td bgcolor="#f1ea8b" style="padding:12px 18px 12px 18px;border-radius:3px; border: 1px solid #DAD483;" align="center"><a href="#" style="font-size:14px;font-family:Arial,sans-serif;font-weight:normal;color:#41535d;text-decoration:none" target="_blank">{copy bottone} <img class="scale-off" src="http://www.technogym.com/webmarketing/_doc/responsive_email/img/link-freccia-verde.png" alt="" width="11" height="11" style="display:inline; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;"></a></td>
                             </tr>
                           </tbody>
                         </table></td>
@@ -307,7 +324,7 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
                   <tbody>
                     <tr>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
-                      <td class="col-1of1 padding" align="center" valign="middle" style="border-spacing:0 !important;" width="576"><font class="copy" face="Arial, Helvetica, sans-serif" style="font-family:Arial, Tahoma, Helvetica, sans-serif; color:#58595b; font-size:14px; line-height:1.5 !important;"><strong>Imperdibile Pacchetto Promozionale Technogym per la Festa della Donna</strong></font></td>
+                      <td class="col-1of1 padding" align="center" valign="middle" style="border-spacing:0 !important;" width="576"><font class="copy" face="Arial, Helvetica, sans-serif" style="font-family:Arial, Tahoma, Helvetica, sans-serif; color:#58595b; font-size:14px; line-height:1.5 !important;"><strong>{headline}</strong></font></td>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
                     </tr>
                   </tbody>
@@ -326,9 +343,9 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
               <td align="center" valign="top" width="100%" style="border-spacing:0 !important;"><table class="container" border="0" cellpadding="0" cellspacing="0" width="600" style="min-width: 600px; border-spacing: 0px !important; background-color:#ffffff;" bgcolor="#FFFFFF">
                   <tbody>
                     <tr>
-                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="http://www.technogym.com/it/wellness-ball-active-sitting/18866?la=1&cam=215887&utm_source=dem&utm_medium=email&utm_content=it&utm_campaign=DEM_SANVALENTINO_ITA_2014"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box1.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
-                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="http://www.technogym.com/it/wellness-ball-active-sitting/18866?la=1&cam=215887&utm_source=dem&utm_medium=email&utm_content=it&utm_campaign=DEM_SANVALENTINO_ITA_2014"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box2.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
-                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="http://www.technogym.com/it/wellness-ball-active-sitting/18866?la=1&cam=215887&utm_source=dem&utm_medium=email&utm_content=it&utm_campaign=DEM_SANVALENTINO_ITA_2014"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box3.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
+                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="#"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box1.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
+                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="#"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box2.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
+                      <td class="col-1of3 no-padd" align="left" valign="middle" style="border-spacing:0 !important;" width="200"><a href="#"><img src="http://extranet.wslabs.it//technogym/sito.NET/webmarketing/2014/8_marzo/dem/img/box3.jpg" alt="" width="200" height="174" style="display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width:100% !important; margin: auto !important; height: auto !important; border:none;" class="scale-off"></a></td>
                     </tr>
                   </tbody>
                 </table></td>
@@ -347,9 +364,7 @@ tr[class="resp_log"] td[class="log"] { background: #4f9f94; }
                   <tbody>
                     <tr>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
-                      <td class="col-1of1 padding" align="left" valign="middle" style="border-spacing:0 !important;" width="576"><p style="font-family:Arial, Tahoma, Helvetica, sans-serif; color:#58595b; font-size:14px; line-height:1.3">Per allenarti tranquillamente a casa tua, per rassodare e snellire glutei, gambe 
-                          e interno coscia, con benefici cardio per tutto il corpo. Strumenti e programmi mirati 
-                          per risultati garantiti scientificamente, adatti alle donne di qualsiasi età.</p></td>
+                      <td class="col-1of1 padding" align="left" valign="middle" style="border-spacing:0 !important;" width="576"><p style="font-family:Arial, Tahoma, Helvetica, sans-serif; color:#58595b; font-size:14px; line-height:1.3">{copy}</p></td>
                       <td class="gutter" align="center" valign="middle" width="12" style="border-spacing:0 !important;"></td>
                     </tr>
                   </tbody>
